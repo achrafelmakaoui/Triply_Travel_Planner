@@ -1,0 +1,223 @@
+.page {
+  min-height: 100vh;
+  background-color: white;
+  padding: 6rem 1.5rem 4rem;
+  font-family: "Outfit", sans-serif;
+}
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+}
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  gap: 1.5rem;
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(15, 76, 69, 0.15);
+  border-top-color: #0f4c45;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #0f4c45;
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.request {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #6b7d79;
+  line-height: 1.6;
+  margin:0.75rem 0 0.5rem 0;
+}
+
+.date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: rgba(107, 125, 121, 0.7);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.block {
+  margin-bottom: 1rem;
+  background: rgba(247, 246, 245, 0.72);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(15, 76, 69, 0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.block:hover {
+  border-color: rgba(15, 76, 69, 0.14);
+  box-shadow: 0 12px 32px rgba(15, 76, 69, 0.08);
+}
+.blockTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'Fraunces', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0f4c45;
+  padding: 1.25rem 1.75rem;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+.blockTitle::-webkit-details-marker {
+  display: none;
+}
+.blockTitle:hover {
+  background: rgba(15, 76, 69, 0.03);
+}
+.blockTitleIcon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+.blockArrow {
+  margin-left: auto;
+  font-size: 0.8rem;
+  color: #6b7d79;
+  transition: transform 0.25s ease;
+}
+.block[open] .blockArrow {
+  transform: rotate(90deg);
+}
+.blockContent {
+  padding: 1rem 1.75rem 1.5rem;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.blockText {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: #3d524d;
+  line-height: 1.75;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.bookingStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  padding: 0.65rem 1.1rem;
+  border-radius: 10px;
+}
+.bookingApproved {
+  color: #1b5e3f;
+  background: rgba(45, 106, 79, 0.1);
+}
+.bookingRejected {
+  color: #a33e24;
+  background: rgba(196, 74, 42, 0.08);
+}
+
+.cta {
+  padding-top: 1rem;
+}
+
+.ctaInner {
+  max-width: 1100px; margin: 0 auto;
+  background: var(--teal);
+  padding: 4.5rem 2rem;
+  border-radius: 28px; text-align:center;
+  background-image: radial-gradient(circle at 20% 20%, rgba(232,99,58,.15), transparent 50%),
+                    radial-gradient(circle at 80% 80%, rgba(15,76,69,.12), transparent 50%);
+}
+.titleCta { 
+  font-family:'Fraunces',serif; 
+  font-size: clamp(2rem, 4vw, 3rem); 
+  color: var(--cream); 
+  margin: 0 0 1.5rem; 
+  letter-spacing:-.02em; 
+  font-weight: 500; 
+}
+
+.btnCta { 
+  background: var(--ink);
+  color: var(--cream);
+  padding: .95rem 2rem;
+  border-radius: 999px;
+  font-weight: 500; font-size: 0.85rem; text-decoration:none;
+  transition: all .25s; display:inline-flex; align-items:center; gap:.4rem;
+  box-shadow: 0 10px 30px -10px rgba(14,31,28,.5);
+}
+
+.btnCta:hover { 
+  background: var(--accent); 
+  box-shadow: 0 14px 36px -10px rgba(232,99,58,.55); 
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 5rem 1rem 3rem;
+  }
+  .title {
+    font-size: 1.65rem;
+  }
+  .blockTitle {
+    padding: 1.1rem 1.4rem;
+    font-size: 0.98rem;
+  }
+  .blockContent {
+    padding: 0 1.4rem 1.25rem;
+  }
+}
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.4rem;
+  }
+  .request {
+    font-size: 0.88rem;
+  }
+  .blockTitle {
+    padding: 1rem 1.2rem;
+  }
+  .blockContent {
+    padding: 0 1.2rem 1.1rem;
+  }
+  .blockText {
+    font-size: 0.88rem;
+  }
+}
