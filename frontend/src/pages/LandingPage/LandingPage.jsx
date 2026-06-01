@@ -1,7 +1,10 @@
-import React from 'react'
+import styles from "./LandingPage.module.css";
+import Hero from "../../components/Hero/Hero";
 
 export default function LandingPage() {
     return (
-        <div>LandingPage</div>
-    )
+        <main className={styles.main}>
+            <Hero/>
+        </main>
+    );
 }
