@@ -1,0 +1,129 @@
+.page {
+  min-height: 100vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1rem 3rem;
+  font-family: "Outfit", sans-serif;
+}
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(247, 246, 245, 0.72);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(15, 76, 69, 0.08);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 12px 40px rgba(15, 76, 69, 0.1);
+}
+.header { 
+  text-align: left; 
+  margin-bottom: 2rem; 
+}
+.title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #0f4c45;
+  margin: 0 0 0.4rem;
+  letter-spacing: -0.02em;
+}
+.subtitle {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.95rem;
+  color: #6b7d79;
+  margin: 0 0 1.5rem;
+}
+.form { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 1.1rem; 
+}
+
+.field { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 0.45rem; 
+}
+
+.label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #0f4c45;
+}
+
+.input {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.95rem;
+  color: #0f4c45;
+  background: white;
+  border: 1px solid rgba(15, 76, 69, 0.1);
+  border-radius: 12px;
+  padding: 0.85rem 1.1rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input:focus {
+  border-color: rgba(15, 76, 69, 0.35);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(15, 76, 69, 0.08);
+}
+
+.input::placeholder {
+  color: #9ba8a4;
+}
+
+.btnSubmit {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #0f4c45;
+  border: none;
+  border-radius: 12px;
+  padding: 0.95rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(15, 76, 69, 0.25);
+  margin-top: 0.5rem;
+}
+
+.btnSubmit:hover:not(:disabled) {
+  box-shadow: 0 8px 24px rgba(15, 76, 69, 0.35);
+  background-color: #145a52;
+}
+
+.btnSubmit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6b7d79;
+  margin: 1.5rem 0 0;
+}
+
+.footerLink {
+  color: #e8633a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footerLink:hover { 
+  color: #0f4c45; 
+}
+
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+}
