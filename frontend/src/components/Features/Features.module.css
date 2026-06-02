@@ -1,0 +1,73 @@
+.features {
+  background: var(--teal); 
+  color: var(--cream);
+  padding: 6rem 2.5rem; 
+  margin-top: 2rem;
+  border-radius: 32px 32px 0 0;
+}
+.features .eyebrow { 
+  color: var(--accent-soft); 
+}
+.features .sectionTitle { 
+  color: var(--cream); 
+  margin-left: auto; 
+  margin-right: auto; 
+  text-align: center; 
+}
+.eyebrow { 
+  font-size: 0.78rem; 
+  font-weight: 700; 
+  color: var(--accent); 
+  letter-spacing: 0.18em; 
+  text-transform: uppercase; 
+  margin: 0 0 0.85rem; 
+}
+.sectionTitle {
+  font-family: 'Fraunces',serif;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0 0 3rem;
+  max-width: 640px;
+}
+.features .eyebrow { 
+  text-align:center; 
+}
+.featureGrid {
+  display:grid; 
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 1.25rem;
+  max-width: 1280px; 
+  margin: 0 auto;
+}
+.featureCard {
+  padding: 1.75rem;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 18px; backdrop-filter: blur(8px);
+  transition: all .3s;
+}
+.featureCard:hover { 
+  background: rgba(255,255,255,.1); 
+  transform: translateY(-4px); 
+  border-color: var(--accent-soft); 
+}
+.featureIcon { 
+  font-size: 1.8rem; 
+  display:block; 
+  margin-bottom: 1rem; 
+}
+.featureTitle { 
+  font-family:'Fraunces',serif; 
+  font-size: 1.2rem; 
+  font-weight: 500; 
+  margin: 0 0 0.5rem; 
+}
+.featureDesc { 
+  font-size: 0.92rem; 
+  line-height: 1.55; 
+  color: rgba(251,247,240,.7); 
+  margin:0; 
+}
