@@ -1,0 +1,8 @@
+.footer {
+  display:flex; 
+  justify-content: space-between; 
+  align-items:center;
+  padding: 2rem 2.5rem; 
+  background: var(--teal-2); color: rgba(251,247,240,.6);
+  font-size: .85rem;
+}
