@@ -1,0 +1,51 @@
+.ctaSection { 
+  background: var(--teal);
+  padding: 0 2.5rem 6rem; 
+}
+.ctaInner {
+  max-width: 1100px; 
+  margin: 0 auto;
+  background: rgba(247, 246, 245, 0.72);
+  padding: 4.5rem 2rem;
+  border-radius: 28px; 
+  text-align:center;
+  background-image: radial-gradient(circle at 20% 20%, rgba(232,99,58,.15), transparent 50%),
+                    radial-gradient(circle at 80% 80%, rgba(15,76,69,.12), transparent 50%);
+}
+.ctaTitle { 
+  font-family:'Fraunces',serif; 
+  font-size: clamp(2rem, 4vw, 3rem); 
+  color: var(--ink); 
+  margin: 0 0 .75rem; 
+  letter-spacing:-.02em; 
+  font-weight: 500; 
+}
+.ctaSubtitle { 
+  color: var(--muted); 
+  font-size: 1.1rem; 
+  margin: 0 0 2rem; 
+}
+
+.btnPrimary {
+  padding: .95rem 1.6rem; 
+  border-radius: 999px;
+  background: var(--ink); 
+  color: var(--cream);
+  font-weight: 600; 
+  font-size: .95rem; 
+  text-decoration:none;
+  transition: all .25s; 
+  display:inline-flex; 
+  align-items:center; 
+  gap:.4rem;
+  box-shadow: 0 10px 30px -10px rgba(14,31,28,.5);
+}
+.btnPrimary:hover { 
+  background: var(--accent); 
+  box-shadow: 0 14px 36px -10px rgba(232,99,58,.55); 
+}
+.btnPrimaryLg { 
+  composes: btnPrimary; 
+  padding: 1.1rem 2rem; 
+  font-size: 1rem; 
+}
