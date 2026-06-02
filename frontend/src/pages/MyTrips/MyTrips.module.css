@@ -1,0 +1,327 @@
+.page {
+  min-height: 100vh;
+  background-color: white;
+  padding: 6rem 1.5rem 4rem;
+  font-family: "Outfit", sans-serif;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(15, 76, 69, 0.12);
+}
+.title {
+  font-family: 'Fraunces', serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #0f4c45;
+  margin: 0 0 0.35rem;
+  letter-spacing: -0.02em;
+}
+.subtitle {
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #6b7d79;
+  margin: 0;
+}
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #0f4c45;
+  padding: 0.85rem 1.6rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(15, 76, 69, 0.25);
+  border: none;
+  cursor: pointer;
+}
+.btnPrimary:hover {
+  box-shadow: 0 8px 24px rgba(15, 76, 69, 0.35);
+  background-color: #145a52;
+}
+.shareBanner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  background: rgba(247, 246, 245, 0.72);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(15, 76, 69, 0.1);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 16px rgba(15, 76, 69, 0.08);
+}
+.shareLabel {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #0f4c45;
+}
+.shareUrl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: #6b7d79;
+  background: rgba(15, 76, 69, 0.05);
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  word-break: break-all;
+}
+.btnCopy {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  background: #0f4c45;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btnCopy:hover {
+  background: #145a52;
+}
+.bannerClose {
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  color: #6b7d79;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  margin-left: auto;
+  transition: color 0.2s ease;
+}
+.bannerClose:hover {
+  color: #0f4c45;
+}
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(15, 76, 69, 0.08);
+  border-radius: 20px;
+}
+.emptyIcon {
+  font-size: 3.5rem;
+  margin-bottom: 1.2rem;
+  display: block;
+  opacity: 0.85;
+}
+.emptyTitle {
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0f4c45;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.01em;
+}
+.emptyDesc {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #6b7d79;
+  line-height: 1.6;
+  margin: 0 0 1.8rem;
+  max-width: 320px;
+}
+.tripList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.tripCard {
+  background: rgba(247, 246, 245, 0.72);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(15, 76, 69, 0.08);
+  border-radius: 18px;
+  padding: 1.75rem 2rem;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tripCard:hover {
+  box-shadow: 0 16px 36px rgba(15, 76, 69, 0.1);
+  border-color: rgba(15, 76, 69, 0.15);
+}
+.tripMain {
+  margin-bottom: 1.25rem;
+}
+.tripInfo {
+  margin-bottom: 1rem;
+}
+.tripTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.tripTitle {
+  font-family: 'Fraunces', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0f4c45;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.publicBadge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: #0f4c45;
+  background: rgba(15, 76, 69, 0.1);
+  padding: 0.25rem 0.55rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.tripRequest {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #6b7d79;
+  line-height: 1.55;
+  margin: 0 0 0.6rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.tripDate {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: rgba(107, 125, 121, 0.7);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.tripSections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.sectionTag {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #0f4c45;
+  background: rgba(15, 76, 69, 0.06);
+  padding: 0.35rem 0.7rem;
+  border-radius: 8px;
+}
+.tripActions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid rgba(15, 76, 69, 0.08);
+}
+.btnShare {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #0f4c45;
+  background: rgba(15, 76, 69, 0.07);
+  border: none;
+  border-radius: 8px;
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btnShare:hover {
+  background: rgba(15, 76, 69, 0.14);
+}
+.btnShare:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+.btnCopySmall {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #e8633a;
+  background: rgba(232, 99, 58, 0.08);
+  border: none;
+  border-radius: 8px;
+  padding: 0.55rem 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btnCopySmall:hover {
+  background: rgba(232, 99, 58, 0.15);
+}
+.btnDelete {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #c44a2a;
+  background: rgba(196, 74, 42, 0.06);
+  border: none;
+  border-radius: 8px;
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-left: auto;
+}
+.btnDelete:hover {
+  background: rgba(196, 74, 42, 0.14);
+}
+@media (max-width: 768px) {
+  .page {
+    padding: 5rem 1rem 3rem;
+  }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+  }
+  .title {
+    font-size: 1.9rem;
+  }
+  .tripCard {
+    padding: 1.5rem;
+  }
+  .tripTitle {
+    font-size: 1.1rem;
+  }
+  .shareBanner {
+    gap: 0.6rem;
+  }
+}
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.6rem;
+  }
+  .btnPrimary {
+    padding: 0.75rem 1.3rem;
+    font-size: 0.85rem;
+  }
+  .tripCard {
+    padding: 1.25rem;
+  }
+  .tripActions {
+    flex-wrap: wrap;
+  }
+  .btnDelete {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 0.4rem;
+  }
+}
