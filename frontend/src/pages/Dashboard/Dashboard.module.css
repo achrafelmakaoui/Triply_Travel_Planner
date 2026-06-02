@@ -1,0 +1,136 @@
+.page {
+  min-height: 100vh;
+  background-color: white;
+  padding: 6rem 1.5rem 4rem;
+  font-family: "Outfit", sans-serif;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(15, 76, 69, 0.12);
+}
+.title {
+  font-family: 'Fraunces', serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #0f4c45;
+  margin: 0 0 0.35rem;
+  letter-spacing: -0.02em;
+}
+.subtitle {
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #6b7d79;
+  margin: 0;
+}
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #0f4c45;
+  padding: 0.85rem 1.6rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(15, 76, 69, 0.25);
+}
+.btnPrimary:hover {
+  box-shadow: 0 8px 24px rgba(15, 76, 69, 0.35);
+  background-color: #145a52;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+.card {
+  background: rgba(247, 246, 245, 0.72);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(15, 76, 69, 0.08);
+  border-radius: 18px;
+  padding: 2rem;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+.card:hover {
+  box-shadow: 0 20px 40px rgba(15, 76, 69, 0.12);
+  border-color: rgba(15, 76, 69, 0.18);
+}
+.cardIcon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+.cardTitle {
+  font-family: 'Fraunces', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0f4c45;
+  margin: 0 0 0.6rem;
+  letter-spacing: -0.01em;
+}
+.cardDesc {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #6b7d79;
+  line-height: 1.6;
+  margin: 0 0 1.2rem;
+  flex-grow: 1;
+}
+.cardLink {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #e8633a;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color 0.2s ease;
+  align-self: flex-start;
+}
+.cardLink:hover {
+  color: #0f4c45;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 5rem 1rem 3rem;
+  }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+  }
+  .title {
+    font-size: 1.9rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.6rem;
+  }
+  .btnPrimary {
+    padding: 0.75rem 1.3rem;
+    font-size: 0.85rem;
+  }
+  .card {
+    padding: 1.5rem;
+  }
+}
