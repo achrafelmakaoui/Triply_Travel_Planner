@@ -1,0 +1,57 @@
+.steps { 
+  padding: 5rem 2.5rem; 
+  max-width: 1280px; 
+  margin: 0 auto; 
+}
+.eyebrow { 
+  font-size:.78rem; 
+  font-weight: 700; 
+  color: var(--accent); 
+  letter-spacing:.18em; 
+  text-transform: uppercase; 
+  margin: 0 0 .85rem; 
+}
+.sectionTitle {
+  font-family:'Fraunces',serif;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing:-.02em;
+  line-height:1.1;
+  margin: 0 0 3rem;
+  max-width: 640px;
+}
+.stepGrid { 
+  display:grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 1.5rem; 
+}
+.step {
+  padding: 2rem; 
+  background: rgba(247, 246, 245, 0.72); 
+  border-radius: 20px;
+  border: 1px solid var(--line); 
+  transition: transform .3s;
+}
+.step:hover { 
+  transform: translateY(-4px); 
+}
+.stepK { 
+  font-family:'Fraunces',serif; 
+  font-size: 1rem; 
+  color: var(--accent); 
+  font-weight:600; 
+}
+.stepT { 
+  font-family:'Fraunces',serif; 
+  font-size: 1.4rem; 
+  font-weight: 500; 
+  margin: .75rem 0 .5rem; 
+  color: var(--ink); 
+}
+.stepD { 
+  color: var(--muted); 
+  line-height: 1.6; 
+  font-size: .95rem; 
+  margin: 0; 
+}
