@@ -71,3 +71,17 @@
   color: rgba(251,247,240,.7); 
   margin:0; 
 }
+
+@media (max-width: 778px) {
+  .features {
+    padding: 6rem 1rem; 
+  }
+  .featureGrid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+@media (max-width: 500px) {
+  .featureGrid {
+    grid-template-columns: repeat(1, 1fr); 
+  }
+}

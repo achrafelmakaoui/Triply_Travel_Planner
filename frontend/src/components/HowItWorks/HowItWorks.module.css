@@ -55,3 +55,21 @@
   font-size: .95rem; 
   margin: 0; 
 }
+
+@media (max-width: 778px) {
+  .steps { 
+    padding: 5rem 1rem; 
+  }
+  .stepGrid { 
+    display:grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1.5rem; 
+  }
+}
+@media (max-width: 500px) {
+  .stepGrid { 
+    display:grid; 
+    grid-template-columns: repeat(1, 1fr); 
+    gap: 1.5rem; 
+  }
+}
