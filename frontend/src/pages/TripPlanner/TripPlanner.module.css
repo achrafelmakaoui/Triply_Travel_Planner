@@ -451,3 +451,55 @@
     padding: 0.45rem 0.8rem; 
   }
 }
+
+.blockContent{
+  font-family: "Outfit", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: #3d524d;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.approvalContent {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.92rem;
+  color: #3d524d;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.approvalContent strong,
+.blockContent strong {
+  font-weight: 600;
+}
+
+.approvalContent ul,
+.blockContent ul {
+  margin: 0.5rem 0 0.5rem 2rem;
+  padding: 0;
+}
+.approvalContent ol,
+.blockContent ol {
+  margin: 0.5rem 0 0.5rem 2rem;
+  padding: 0;
+}
+
+.approvalContent li,
+.blockContent li {
+  margin-bottom: 0.4rem;
+  list-style-type: disc;
+}
+.approvalContent h1,
+.approvalContent h2,
+.approvalContent h3,
+.blockContent h1,
+.blockContent h2,
+.blockContent h3 {
+  margin: 1rem 0 0.5rem 0;
+  font-weight: 700;
+}
+.approvalContent p,
+.blockContent p {
+  margin-bottom: 0.7rem;
+}

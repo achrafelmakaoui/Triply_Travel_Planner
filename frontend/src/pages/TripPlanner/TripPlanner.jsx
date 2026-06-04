@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../../api/axios";
 import styles from "./TripPlanner.module.css";
+import ReactMarkdown from "react-markdown";
 
 const AGENT_LABELS = {
   supervisor: { label: "Supervisor", icon: "🧠" },
@@ -136,7 +137,7 @@ export default function TripPlanner() {
       setSaving(true);
       try {
         await api.post("/api/trips", {
-          title: request.slice(0, 60),
+          title: request.slice(0, 80),
           request,
           result: {
             destinationInfo: result.destination_info,
@@ -220,7 +221,7 @@ export default function TripPlanner() {
                             <p className={styles.approvalSubtitle}>Please review the booking summary before confirming.</p>
                         </div>
                         <div className={styles.approvalContent}>
-                            <pre className={styles.summaryText}>{approvalData.booking_summary}</pre>
+                            <ReactMarkdown>{approvalData.booking_summary}</ReactMarkdown>
                         </div>
                         <div className={styles.approvalButtons}>
                             <button className={styles.btnApprove} onClick={() => handleApproval("yes")}>Confirm booking</button>
@@ -248,7 +249,7 @@ export default function TripPlanner() {
                                         <span className={styles.blockArrow}>▸</span>
                                     </summary>
                                     <div className={styles.blockContent}>
-                                        <p className={styles.blockText}>{result.destination_info}</p>
+                                        <ReactMarkdown>{result.destination_info}</ReactMarkdown>
                                     </div>
                                 </details>
                             )}
@@ -260,7 +261,7 @@ export default function TripPlanner() {
                                         <span className={styles.blockArrow}>▸</span>
                                     </summary>
                                     <div className={styles.blockContent}>
-                                        <p className={styles.blockText}>{result.budget_breakdown}</p>
+                                        <ReactMarkdown>{result.budget_breakdown}</ReactMarkdown>
                                     </div>
                                 </details>
                             )}
@@ -272,7 +273,7 @@ export default function TripPlanner() {
                                         <span className={styles.blockArrow}>▸</span>
                                     </summary>
                                     <div className={styles.blockContent}>
-                                        <p className={styles.blockText}>{result.itinerary}</p>
+                                        <ReactMarkdown>{result.itinerary}</ReactMarkdown>
                                     </div>
                                 </details>
                             )}
@@ -284,7 +285,7 @@ export default function TripPlanner() {
                                         <span className={styles.blockArrow}>▸</span>
                                     </summary>
                                     <div className={styles.blockContent}>
-                                        <p className={styles.blockText}>{result.booking_summary}</p>
+                                        <ReactMarkdown>{result.booking_summary}</ReactMarkdown>
                                         {result.booking_approved !== undefined && (
                                             <div className={`${styles.bookingStatus} ${result.booking_approved ? styles.bookingApproved : styles.bookingRejected}`}>
                                                 {result.booking_approved ? "Confirmed" : "Cancelled"}

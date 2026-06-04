@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import api from "../../api/axios";
 import styles from "./TripDetail.module.css";
+import ReactMarkdown from "react-markdown";
 
 export default function TripDetail() {
     const { id } = useParams();
@@ -93,7 +94,7 @@ export default function TripDetail() {
                                 <span className={styles.blockArrow}>▸</span>
                             </summary>
                             <div className={styles.blockContent}>
-                                <p className={styles.blockText}>{trip.result.destinationInfo}</p>
+                                <ReactMarkdown>{trip.result.destinationInfo}</ReactMarkdown>
                             </div>
                         </details>
                     )}
@@ -105,7 +106,7 @@ export default function TripDetail() {
                                 <span className={styles.blockArrow}>▸</span>
                             </summary>
                             <div className={styles.blockContent}>
-                                <p className={styles.blockText}>{trip.result.budgetBreakdown}</p>
+                                <ReactMarkdown>{trip.result.budgetBreakdown}</ReactMarkdown>
                             </div>
                         </details>
                     )}
@@ -117,7 +118,7 @@ export default function TripDetail() {
                                 <span className={styles.blockArrow}>▸</span>
                             </summary>
                             <div className={styles.blockContent}>
-                                <p className={styles.blockText}>{trip.result.itinerary}</p>
+                                <ReactMarkdown>{trip.result.itinerary}</ReactMarkdown>
                             </div>
                         </details>
                     )}
@@ -131,7 +132,7 @@ export default function TripDetail() {
                                 <span className={styles.blockArrow}>▸</span>
                             </summary>
                             <div className={styles.blockContent}>
-                                <p className={styles.blockText}>{trip.result.bookingSummary}</p>
+                                <ReactMarkdown>{trip.result.bookingSummary}</ReactMarkdown>
                                 <div className={`${styles.bookingStatus} ${trip.result.bookingApproved ? styles.bookingApproved : styles.bookingRejected}`}>
                                     {trip.result.bookingApproved ? "You confirmed this booking" : "You cancelled this booking"}
                                 </div>

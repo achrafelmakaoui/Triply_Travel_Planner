@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import styles from "./PublicTrip.module.css";
+import ReactMarkdown from "react-markdown";
 
 export default function PublicTrip() {
     const { shareId } = useParams();
@@ -8,41 +9,43 @@ export default function PublicTrip() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-      const fetchTrip = async () => {
-        try {
-          const response = await fetch(
-            `http://localhost:5000/api/trips/share/${shareId}`
-          );
-          if (!response.ok) throw new Error("Trip not found");
-          const data = await response.json();
-          setTrip(data);
-        } catch (err) {
-          console.log("This trip doesn't exist or is no longer public.");
-        } finally {
-        setLoading(false);
-      }
-      };
-      fetchTrip();
+        const fetchTrip = async () => {
+            try {
+                const response = await fetch(
+                    `http://localhost:5000/api/trips/share/${shareId}`
+                );
+                if (!response.ok) throw new Error("Trip not found");
+                const data = await response.json();
+                setTrip(data);
+            } 
+            catch (err) {
+                console.log("This trip doesn't exist or is no longer public.");
+            } 
+            finally {
+                setLoading(false);
+            }
+        };
+        fetchTrip();
     }, [shareId]);
 
     const formatDate = (dateStr) =>
-    new Date(dateStr).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
+        new Date(dateStr).toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+        });
 
     if (loading) {
-      return (
-        <div className={styles.page}>
-            <div className={styles.container}>
-                <div className={styles.center}>
-                    <div className={styles.spinner}></div>
-                    <p className={styles.loadingText}>Loading trip details…</p>
+        return (
+            <div className={styles.page}>
+                <div className={styles.container}>
+                    <div className={styles.center}>
+                        <div className={styles.spinner}></div>
+                        <p className={styles.loadingText}>Loading trip details…</p>
+                    </div>
                 </div>
             </div>
-        </div>
-      );
+        );
     }
 
     return (
@@ -64,7 +67,7 @@ export default function PublicTrip() {
                             <span className={styles.blockArrow}>▸</span>
                         </summary>
                         <div className={styles.blockContent}>
-                            <p className={styles.blockText}>{trip.result.destinationInfo}</p>
+                            <ReactMarkdown>{trip.result.destinationInfo}</ReactMarkdown>
                         </div>
                     </details>
                 )}
@@ -77,7 +80,7 @@ export default function PublicTrip() {
                             <span className={styles.blockArrow}>▸</span>
                         </summary>
                         <div className={styles.blockContent}>
-                            <p className={styles.blockText}>{trip.result.budgetBreakdown}</p>
+                            <ReactMarkdown>{trip.result.budgetBreakdown}</ReactMarkdown>
                         </div>
                     </details>
                 )}
@@ -90,7 +93,7 @@ export default function PublicTrip() {
                             <span className={styles.blockArrow}>▸</span>
                         </summary>
                         <div className={styles.blockContent}>
-                            <p className={styles.blockText}>{trip.result.itinerary}</p>
+                            <ReactMarkdown>{trip.result.itinerary}</ReactMarkdown>
                         </div>
                     </details>
                 )}
@@ -103,7 +106,7 @@ export default function PublicTrip() {
                             <span className={styles.blockArrow}>▸</span>
                         </summary>
                         <div className={styles.blockContent}>
-                            <p className={styles.blockText}>{trip.result.bookingSummary}</p>
+                            <ReactMarkdown>{trip.result.bookingSummary}</ReactMarkdown>
                             <div className={`${styles.bookingStatus} ${trip.result.bookingApproved ? styles.bookingApproved : styles.bookingRejected}`}>
                                 {trip.result.bookingApproved ? "You confirmed this booking" : "You cancelled this booking"}
                             </div>
